@@ -1,0 +1,18 @@
+# virtual environment
+/venv*
+
+# Python cache folders
+**/__pycache__
+
+# PyCharm folders
+/.idea
+
+# LexComSpaL2 corpus (to be cloned by user)
+/input*/LexComSpaL2
+
+# output and temp folders
+/output*
+/temp*
+
+# HPC files
+*.pbs
