@@ -8,7 +8,7 @@
 /.idea
 
 # LexComSpaL2 corpus (to be cloned by user)
-/input*/LexComSpaL2
+/input*/LexComSpaL2*
 
 # output and temp folders
 /output*
