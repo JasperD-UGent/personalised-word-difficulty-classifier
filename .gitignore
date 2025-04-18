@@ -16,3 +16,6 @@
 
 # HPC files
 *.pbs
+HPC*.txt
+HPC*.e*
+HPC*.o*
