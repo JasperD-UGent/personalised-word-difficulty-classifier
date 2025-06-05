@@ -1,10 +1,10 @@
 # personalised-word-difficulty-classifier
 
-This repository contains the code to train the personalised word difficulty classifier for learners of Spanish as a foreign/second language (L2), presented in [anonymised_reference]. The repository allows you to train two different versions of the classifier: a *base* version (trained on the original version of the LexComSpaL2 corpus; Degraeuwe & Goethals, 2024) and a *word family* version (trained on an enriched version of LexComSpaL2 in which information on word family knowledge was added; for more details see the [requirements section](#requirements) below). Information on how to run the scripts is also provided below, in two separate subsections.
+This repository contains the code to train the personalised word difficulty classifier for learners of Spanish as a foreign/second language (L2), presented in Degraeuwe (2025). The repository allows you to train two different versions of the classifier: a *base* version (trained on the original version of the LexComSpaL2 corpus; Degraeuwe & Goethals, 2024) and a *word family* version (trained on an enriched version of LexComSpaL2 in which information on word family knowledge was added; Degraeuwe, 2025). Information on how to run the scripts is provided below, in two separate subsections.
 
 ## Requirements
 
-First, install the Python packages included in `requirements.txt`, preferably in a fresh virtual environment. The scripts were tested with Python 3.11 on a Linux machine. To install the requirements via the command line, run the following command in your shell (from the root directory of this repository as your working directory):
+First, however, install the Python packages included in `requirements.txt`, preferably in a fresh virtual environment. The scripts were tested with Python 3.11 on a Linux machine. To install the requirements via the command line, run the following command in your shell (from the root directory of this repository as your working directory):
 
 ```shell
 $ python -m pip install -r requirements.txt
@@ -14,16 +14,13 @@ $ python -m pip install -r requirements.txt
 
 **NOTE**: If you want to train the classifier on a GPU, please consult [TensorFlow's dedicated web page](https://www.tensorflow.org/install/pip) to install the correct version for your device and CUDA architecture.
 
-Secondly, [download](https://zenodo.org/records/3255001) the pretrained fastText embeddings used by the classifier (see also corresponding [GitHub repository](https://github.com/BotCenter/spanishWordEmbeddings) for more details). For the classifier presented in [anonymous_reference], the L model was used.
+Secondly, [download](https://zenodo.org/records/3255001) the pretrained fastText embeddings used by the classifier (see also corresponding [GitHub repository](https://github.com/BotCenter/spanishWordEmbeddings) for more details). For the classifier presented in Degraeuwe (2025), the L model was used.
 
-Thirdly, the original LexComSpaL2 data as well as the "word-family enriched" version of the dataset need to be downloaded. The original data can be retrieved by cloning the corresponding GitHub repository from the command line as follows (note that the data need to be saved into the `input_v1/LexComSpaL2` folder):
+Thirdly, the original LexComSpaL2 data as well as the "word-family enriched" version of the dataset need to be downloaded. Both dataset versions can be retrieved by cloning the corresponding GitHub repository from the command line as follows (note that the data need to be saved into the `input_v1/LexComSpaL2` folder):
 
 ```shell
 $ git clone https://github.com/JasperD-UGent/LexComSpaL2.git input_v1/LexComSpaL2
 ```
-
-The enriched version of LexComSpaL2 needs to be downloaded manually from the corresponding [anonymous GitHub repository](https://anonymous.4open.science/r/LexComSpaL2-enriched-word-families-101F) and stored in `input_v1/LexComSpaL2_enriched`. Upon acceptance of the BEA paper (which has hitherto been referred to as "[anonymous_reference]"), this part of the read me will be replaced by a `git clone` command.
-
 
 ## Base classifier
 
@@ -62,6 +59,6 @@ $ python train_classifier_wordFams_v1.py -h
 ```
 
 ## References
-- [anonymous_reference]
+- Degraeuwe, J. (2025). You Shall Know a Word's Difficulty by the Family It Keeps: Word Family Features in Personalised Word Difficulty Classifiers for L2 Spanish.
 
 - Degraeuwe, J., & Goethals, P. (2024). LexComSpaL2: A Lexical Complexity Corpus for Spanish as a Foreign Language. In N. Calzolari, M.-Y. Kan, V. Hoste, A. Lenci, S. Sakti, & N. Xue (Eds.), *Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)* (pp. 10432–10447). Torino, Italy: ELRA and ICCL. https://aclanthology.org/2024.lrec-main.912/

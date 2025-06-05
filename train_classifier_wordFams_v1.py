@@ -33,7 +33,7 @@ def load_lexcomspal2_enriched_annots(word_fam_level: str) -> Dict:
     :param word_fam_level: Word family level.
     :return: A dictionary containing the LexComSpaL2 annotations (sentence>target word>participant).
     """
-    path_direc_lexcomspal2 = os.path.join("input_v1", "LexComSpaL2_enriched")
+    path_direc_lexcomspal2 = os.path.join("input_v1", "LexComSpaL2")
     d_dataset_annots_combi = {}
 
     if word_fam_level in ["token", "combi"]:
